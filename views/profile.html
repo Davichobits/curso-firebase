@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Profile | CodingTube</title>
+</head>
+<body>
+  <header>
+    <div class="profile-img-container">
+      <img id="profile-img" src=""></img>
+    </div>
+    <div class="logout-btn-container">
+      <button id="logout-btn">Cerrar sesion</button>
+    </div>
+  </header>
+  <h1>Bienvenido <span id="user-name">CodingTuber</span></h1>
+  <section class="post-container">
+    <form id="post-form">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <img src="" alt="" id="imageToUpload">
+      <input id="update-photo" type="file">
+      <input type="submit" value="postear" id="postBtn">
+    </form>
+  </section>
+  <script src="../src/profile.js" type="module"></script>
+</body>
+</html>

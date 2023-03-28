@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+  text-align: center;
+  margin: 30px;
+}
+h2{
+  margin-top: 20px;
+  text-align: center;
+}
+.home{
+  margin: 20px;
+}
+.form{
+  border: 1px solid;
+  width: 300px;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px auto;
+}
+input{
+  height: 30px;
+  padding-left: 12px;
+}
+.error{
+  text-align: center;
+  color: red;
+  margin-bottom: 16px;
+}
+.user-msg{
+  text-align: center;
+}
+.logout-btn-container{
+  text-align: right;
+  padding: 0 10px;
+}
+.profile-img-container{
+  text-align: right;
+  padding: 10px;
+}
+#profile-img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.googleBtn{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 5px;
+}
+
+#post-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
