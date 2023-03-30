@@ -65,3 +65,12 @@ input{
   flex-direction: column;
   align-items: center;
 }
+
+#update-photo{
+  opacity: 0;
+}
+
+.update-photo-container{
+  border: 1px solid red;
+  width: 90px;
+}

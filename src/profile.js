@@ -16,8 +16,7 @@ const logoutBtn = document.querySelector('#logout-btn');
 const userName = document.querySelector('#user-name');
 const profileImg = document.querySelector('#profile-img')
 const updatePhoto = document.querySelector('#update-photo');
-const imageToUpload = document.querySelector('#imageToUpload');
-const postForm = document.querySelector('#post-form');
+const postBtn = document.querySelector('#postBtn');
 
 // Observador
 onAuthStateChanged(auth, user => {
@@ -39,31 +38,23 @@ onAuthStateChanged(auth, user => {
 })
 
 // SubirFoto
-postForm.addEventListener('submit', async (e)=>{
+postBtn.addEventListener('click', async (e)=>{
   e.preventDefault();
   const file = e.target[1].files[0];
-  
+  console.log(file)
   if(file == null){
     alert('selecciona un archivo')
   }else{
-    
-    // const metadata = {
-    //   contentType: file.type,
-    // }
-    // console.log(metadata)
-
-
-    // 'file' comes from the Blob or File API
     const storageRef = ref(storage, 'imagenes');
-    uploadBytes(storageRef, file).then((snapshot) => {
-      console.log('Uploaded a blob or file!');
-      console.log(snapshot)
-      // getDownloadURL(storageRef)
-      //   .then((url)=>{
-      //     console.log(url)
-      //     // imageToUpload.src = url;
-      //   })
-    });
+    uploadBytes(storageRef, file)
+    .then((snapshot) => {
+      getDownloadURL(storageRef)
+        .then((url)=>{
+          console.log(url)
+          profileImg.src = url;
+        })
+    })
+    .catch(error => console.log('error: ' + error))
   }
 });
 
